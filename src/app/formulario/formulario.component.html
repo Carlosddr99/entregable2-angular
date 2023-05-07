@@ -1,0 +1,12 @@
+<h1>Módulo Formulario</h1>
+
+<form [formGroup]="formData" (ngSubmit)="onSubmit()">
+    Nombre: <input type="text" formControlName="nombre"><br>
+    Apellidos: <input type="text" formControlName="apellidos"><br>
+    Edad: <input type="number" formControlName="edad"><br>
+    Dni: <input type="text" formControlName="dni"><br>
+    Mail: <input type="email" formControlName="mail"><br>
+    Contraseña: <input type="password" formControlName="password"><br>
+    Repite Contraseña: <input type="password" formControlName="repitPassword"><br>
+    <input *ngIf="formData.valid" type="submit" value="Enviar">
+</form>

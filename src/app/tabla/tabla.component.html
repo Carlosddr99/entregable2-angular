@@ -1,0 +1,26 @@
+<h1>Módulo Tabla</h1>
+
+<button (click)="onChange()">Change</button>
+<table >
+    <tr [ngClass]="mostrar? 'table-default' : 'table-change'">
+        <td>Nombre</td>
+        <td>Edad</td>
+        <td>País Nacimiento</td>
+        <td>Color Piel</td>
+        <td *ngIf="mostrar">Talla Pies</td>
+        <td *ngIf="mostrar">Color Ojos</td>
+        <td *ngIf="!mostrar">Estatura</td>
+        <td *ngIf="!mostrar">Color Pelo</td>
+    </tr>
+    <tr *ngFor="let person of personas">
+        <td>{{person.nombre}}</td>
+        <td>{{person.edad}}</td>
+        <td>{{person.pais}}</td>
+        <td>{{person.piel}}</td>
+        <td *ngIf="mostrar">{{person.talla}}</td>
+        <td *ngIf="mostrar">{{person.ojos}}</td>
+        <td *ngIf="!mostrar">{{person.estatura}}</td>
+        <td *ngIf="!mostrar">{{person.pelo}}</td>
+    </tr>
+</table>
+
